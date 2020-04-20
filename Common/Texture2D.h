@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "stb_image.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -7,7 +7,7 @@
 #include <sstream>
 #include <iostream>
 
-///Ä¿Ç°µÄTexture2DÀà£¬ÊÇ²»¿¼ÂÇMipMapµÄÒÔºó¿ÉÒÔÀ©Õ¹
+///ç›®å‰çš„Texture2Dç±»ï¼Œæ˜¯ä¸è€ƒè™‘MipMapçš„ä»¥åŽå¯ä»¥æ‰©å±•
 class Texture2D {
 public:
 	int width;
@@ -71,10 +71,10 @@ public:
 
 	void use() {
 		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, texture);//Ë¼¿¼ÔõÃ´°ó¶¨¶àÕÅÌùÍ¼ÄØ£¿
+		glBindTexture(GL_TEXTURE_2D, texture);//æ€è€ƒæ€Žä¹ˆç»‘å®šå¤šå¼ è´´å›¾å‘¢ï¼Ÿ
 	}
 
-	//ÔÚÖ¸¶¨Î»ÖÃÉÏ°ó¶¨ÌùÍ¼£¬²ÎÊýÎª0-15£¬¹²16¸öÌùÍ¼Î»
+	//åœ¨æŒ‡å®šä½ç½®ä¸Šç»‘å®šè´´å›¾ï¼Œå‚æ•°ä¸º0-15ï¼Œå…±16ä¸ªè´´å›¾ä½
 	void use(int textureIndex) {
 		if (textureIndex >= 0 && textureIndex < 16) {
 			glActiveTexture(GL_TEXTURE0 + textureIndex);
@@ -90,10 +90,10 @@ public:
 		{
 			glGenTextures(1, &texture);
 
-			//ÕâÀï×¢ÒâÒ»ÏÂ£¬GL_TEXTURE_2DÊÇ Ö¸¶¨µÄÒ»¸öÎÆÀíÄ¿±ê£¬
+			//è¿™é‡Œæ³¨æ„ä¸€ä¸‹ï¼ŒGL_TEXTURE_2Dæ˜¯ æŒ‡å®šçš„ä¸€ä¸ªçº¹ç†ç›®æ ‡ï¼Œ
 			glBindTexture(GL_TEXTURE_2D, texture);
 
-			//Îªµ±Ç°°ó¶¨µÄÎÆÀí£¬ÉèÖÃ»·ÈÆ£¬¹ýÂË·½Ê½
+			//ä¸ºå½“å‰ç»‘å®šçš„çº¹ç†ï¼Œè®¾ç½®çŽ¯ç»•ï¼Œè¿‡æ»¤æ–¹å¼
 			if (wrapMode != GL_CLAMP_TO_BORDER) {
 				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrapMode);
 				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrapMode);
@@ -106,20 +106,20 @@ public:
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filterMode);
 						
 			glTexImage2D(
-				GL_TEXTURE_2D,  //ÎÆÀíÀàÐÍ£¨Ä¿±ê£©
-				0,				//MipMapµÈ¼¶£¬0Îª»ù´¡¼¶±ð
-				internalFormat,			//ÎÆÀí´æ´¢ÎªºÎÖÖ¸ñÊ½
+				GL_TEXTURE_2D,  //çº¹ç†ç±»åž‹ï¼ˆç›®æ ‡ï¼‰
+				0,				//MipMapç­‰çº§ï¼Œ0ä¸ºåŸºç¡€çº§åˆ«
+				internalFormat,			//çº¹ç†å­˜å‚¨ä¸ºä½•ç§æ ¼å¼
 				width,
 				height,
-				0,				//ÀúÊ·ÒÅÁôÎÊÌâ£¬Ìî0¼´¿É
-				sourceFormat,			//Ô­Í¼ÀàÐÍ
-				GL_UNSIGNED_BYTE,//Ô­Í¼´æ´¢ÀàÐÍ¡£
+				0,				//åŽ†å²é—ç•™é—®é¢˜ï¼Œå¡«0å³å¯
+				sourceFormat,			//åŽŸå›¾ç±»åž‹
+				GL_UNSIGNED_BYTE,//åŽŸå›¾å­˜å‚¨ç±»åž‹ã€‚
 				data
 			);		
 			glGenerateMipmap(GL_TEXTURE_2D);
 
-			//Èç¹ûÐèÒªÉú³ÉMipMap£¬ÔòÔÚÉ¾³ýÊý¾ÝÖ®Ç°×öÕâ¼þÊÂ¡£
-			//Í¼Æ¬¼ÓÔØµ½GPUÖ®ºó£¬¾Í¿ÉÒÔÊÍ·ÅµôÁËÃ»±ØÒª±£³ÖÁ½·Ý
+			//å¦‚æžœéœ€è¦ç”ŸæˆMipMapï¼Œåˆ™åœ¨åˆ é™¤æ•°æ®ä¹‹å‰åšè¿™ä»¶äº‹ã€‚
+			//å›¾ç‰‡åŠ è½½åˆ°GPUä¹‹åŽï¼Œå°±å¯ä»¥é‡Šæ”¾æŽ‰äº†æ²¡å¿…è¦ä¿æŒä¸¤ä»½
 			stbi_image_free(data);
 		}
 		else {

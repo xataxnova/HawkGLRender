@@ -1,4 +1,4 @@
-#include <glad/glad.h>
+ï»¿#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include "Engine.h"
@@ -7,17 +7,17 @@
 #include "Topics/GLRectWithTexture.h"
 #include "Topics/GLStupidCube.h"
 
-//Ë¼¿¼Ò»¸öÎÊÌâ:±àĞ´OpenGLµÄÊ±ºò£¬
-// ÄÄĞ©·ÅÔÚMainº¯ÊıÍâ²¿£¬
-// ÄÄĞ©¿ÉÒÔ×ö³ÉÍâ²¿×ÊÔ´£¬
-// ÄÄĞ©ÒªĞ´ÔÚMainº¯ÊıÄÚ²¿
-// ÄÄĞ©ĞèÒªĞ´ÔÚÖ÷Ñ­»·ÀïÃæ£¿
-//ÉèÖÃ´°¿ÚResizeÊ±ºòµÄ»Øµ÷º¯Êı¡£
+//æ€è€ƒä¸€ä¸ªé—®é¢˜:ç¼–å†™OpenGLçš„æ—¶å€™ï¼Œ
+// å“ªäº›æ”¾åœ¨Mainå‡½æ•°å¤–éƒ¨ï¼Œ
+// å“ªäº›å¯ä»¥åšæˆå¤–éƒ¨èµ„æºï¼Œ
+// å“ªäº›è¦å†™åœ¨Mainå‡½æ•°å†…éƒ¨
+// å“ªäº›éœ€è¦å†™åœ¨ä¸»å¾ªç¯é‡Œé¢ï¼Ÿ
+//è®¾ç½®çª—å£Resizeæ—¶å€™çš„å›è°ƒå‡½æ•°ã€‚
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 int main()
 {
-	// glfw: ³õÊ¼»¯OpenGL£¬Ñ¡ÓÃÄÚºËÄ£Ê½µÄProfile
+	// glfw: åˆå§‹åŒ–OpenGLï¼Œé€‰ç”¨å†…æ ¸æ¨¡å¼çš„Profile
 	// ------------------------------
 	if (!glfwInit()) {
 		std::cout << "failed to initialize GLFW.\n";
@@ -36,8 +36,8 @@ int main()
 	// glfw window creation
 	// --------------------
 	//GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
-	//ÕâÀïÓ¦¸ÃÒ²°Ñ¸÷ÖÖ¾ä±úÊ²Ã´ÂÒÆß°ËÔãµÄwindows½Ó¿Ú·â×°ÁË¡£ËùÒÔÓÃglfwÕâÖÖ¿âÊÇÕıÈ·µÄ
-	//£¬Ö±½ÓÓÃOpenGL½Ó¿ÚĞ´¶«Î÷»áÉú»î²»ÄÜ×ÔÀíµÄ¡£¶øÇÒÄÇĞ©ÍæÒâ£¬Ğ´Ò»±é¾ø²»»áĞ´µÚ¶ş±é
+	//è¿™é‡Œåº”è¯¥ä¹ŸæŠŠå„ç§å¥æŸ„ä»€ä¹ˆä¹±ä¸ƒå…«ç³Ÿçš„windowsæ¥å£å°è£…äº†ã€‚æ‰€ä»¥ç”¨glfwè¿™ç§åº“æ˜¯æ­£ç¡®çš„
+	//ï¼Œç›´æ¥ç”¨OpenGLæ¥å£å†™ä¸œè¥¿ä¼šç”Ÿæ´»ä¸èƒ½è‡ªç†çš„ã€‚è€Œä¸”é‚£äº›ç©æ„ï¼Œå†™ä¸€éç»ä¸ä¼šå†™ç¬¬äºŒé
 	auto window = glfwCreateWindow(
 		RenderTarget::mainRenderTarget->Width, 
 		RenderTarget::mainRenderTarget->Height, 

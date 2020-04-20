@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <vector> 
@@ -68,10 +68,10 @@ public://functions
 		shader->setMatrix4fv("projection", projection);
 	}
 
-	//Õâ¸ö×ö·¨²»Ì«ºÃ£¬Õâ¸ö²»ÊÇCameraµÄ¹¦ÄÜ£¬¶øÊÇFirstPersonControllerµÄ¹¦ÄÜ¡£µÈ×öÍêÕâ¸öÀı×ÓÖ®ºó£¬°ÑËû³é³öÀ´¡£
-	//×÷ÎªÒ»¸öCameraControllerÀàÀ´²Ù×÷£¡
-	//Transfrom×·¼Ó getUp£¬getRight£¬getForwardÈı¸ö¹ØÁª·½·¨¡£
-	void processInput(GLFWwindow *window)
+	//è¿™ä¸ªåšæ³•ä¸å¤ªå¥½ï¼Œè¿™ä¸ªä¸æ˜¯Cameraçš„åŠŸèƒ½ï¼Œè€Œæ˜¯FirstPersonControllerçš„åŠŸèƒ½ã€‚ç­‰åšå®Œè¿™ä¸ªä¾‹å­ä¹‹åï¼ŒæŠŠä»–æŠ½å‡ºæ¥ã€‚
+	//ä½œä¸ºä¸€ä¸ªCameraControllerç±»æ¥æ“ä½œï¼
+	//Transfromè¿½åŠ  getUpï¼ŒgetRightï¼ŒgetForwardä¸‰ä¸ªå…³è”æ–¹æ³•ã€‚
+	void processInput(GLFWwindow *window) 
 	{
 
 	}
