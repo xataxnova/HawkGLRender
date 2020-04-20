@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Common">
+      <UniqueIdentifier>{342bb30b-5829-40b9-aa99-54d7f011f89c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Topics">
+      <UniqueIdentifier>{f7b2c06b-3d9b-4074-b28f-6bb0b7b8fe99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\Shaders">
+      <UniqueIdentifier>{6b36f5e0-b6cc-479d-9f15-1279e45e4e45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\Resources">
+      <UniqueIdentifier>{dc1aa3c0-b87e-4c55-960a-707ed4f283a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Common">
+      <UniqueIdentifier>{fe14a90e-e64c-4324-9c8f-32b9aabc6347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Managers">
+      <UniqueIdentifier>{647e95f1-24e6-41f4-8420-04db1cfe3b8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Component">
+      <UniqueIdentifier>{d9a2a9b3-97b2-408f-85eb-4e87d13fca1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Entrance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\glad\src\glad.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.cpp">
+      <Filter>源文件\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Topics\GLTriangleWithColoredVertex.h">
+      <Filter>头文件\Topics</Filter>
+    </ClInclude>
+    <ClInclude Include="Topics\GLRectWithTexture.h">
+      <Filter>头文件\Topics</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Common.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GLRenderElement.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Shader.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\stb_image.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Texture2D.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Matrix.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Time.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Transform.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Camera.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\RenderTarget.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\Managers.h">
+      <Filter>头文件\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\RenderManager.h">
+      <Filter>头文件\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Topics\GLStupidCube.h">
+      <Filter>头文件\Topics</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CameraController.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GameElement.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\ElementManager.h">
+      <Filter>头文件\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\vertexColorTriangle.fs">
+      <Filter>资源文件\Shaders</Filter>
+    </None>
+    <None Include="Shaders\vertexColorTriangle.vs">
+      <Filter>资源文件\Shaders</Filter>
+    </None>
+    <None Include="Shaders\textureRect.fs">
+      <Filter>资源文件\Shaders</Filter>
+    </None>
+    <None Include="Shaders\textureRect.vs">
+      <Filter>资源文件\Shaders</Filter>
+    </None>
+    <None Include="Shaders\unlitTexture.fs">
+      <Filter>资源文件\Shaders</Filter>
+    </None>
+    <None Include="Shaders\unlitTexture.vs">
+      <Filter>资源文件\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
