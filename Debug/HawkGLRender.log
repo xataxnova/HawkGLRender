@@ -1,2 +1,32 @@
 ﻿  Entrance.cpp
+c:\dev\hawkglrender\hawkglrender\common\fpscameracontroller.h(39): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\dev\hawkglrender\hawkglrender\common\fpscameracontroller.h(40): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x2f5 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x2f6 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x2f9 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x2fa 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x2fc 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x2ff 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x300 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x301 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x307 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x309 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x30a 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x310 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x313 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x314 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x318 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x31f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x322 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x32f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x333 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x335 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x337 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x338 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x33b 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x33f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x340 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x341 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x342 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+c:\dev\hawkglrender\hawkglrender\managers\elementmanager.h : warning C4828: 文件包含在偏移 0x344 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
   HawkGLRender.vcxproj -> C:\Dev\HawkGLRender\Debug\HawkGLRender.exe

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <vector> 
@@ -29,7 +29,7 @@ public:
 	}
 
 	void doLocal(glm::mat4 & transMatrix) {	
-		//½â¿ªÕâÁ½¸öÉèÖÃ£¬ÄÜµÃµ½UnityÏàÍ¬Ğ§¹û¡£
+		//è§£å¼€è¿™ä¸¤ä¸ªè®¾ç½®ï¼Œèƒ½å¾—åˆ°Unityç›¸åŒæ•ˆæœã€‚
 		//transMatrix = glm::rotate(transMatrix, glm::radians(-rotation.x), axis_x);
 		//transMatrix = glm::rotate(transMatrix, glm::radians(-rotation.y), axis_y);
 		transMatrix = glm::rotate(transMatrix, glm::radians(rotation.x), axis_x);

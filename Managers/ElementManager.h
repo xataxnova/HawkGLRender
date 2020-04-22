@@ -28,13 +28,16 @@ public:
 		renderManager->renderToCamera(cam);
 	}
 
-	void processInput() {
-		if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+	void update() {
+
+		//if Input::isKeyDown(GLFW_KEY_ESCAPE)???封装成这样，其实也是可以的，然后这里就统一改成tick()
+		//暂时这样，也勉强还可以
+		if ( Input::isKeyDown(GLFW_KEY_ESCAPE) )
 			glfwSetWindowShouldClose(window, true);
 
 		for (size_t i = 0; i < elements.size(); i++)
 		{
-			elements[i]->inputProcess(window);
+			elements[i]->update();
 		}
 	}
 };

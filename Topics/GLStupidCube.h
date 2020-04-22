@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <vector> 
@@ -79,7 +79,7 @@ public:
 		shader->use();
 		shader->setInt("texture", 0);		
 
-		//Ó¦ÓÃMVP¾ØÕó£¬µ½Shader
+		//åº”ç”¨MVPçŸ©é˜µï¼Œåˆ°Shader
 		currentCam->applyMVP(shader, transform);
 
 		texture->use(0);
@@ -91,7 +91,7 @@ public:
 	~GLStupidCube() {
 		delete shader;
 		delete texture;
-		//ÕâÀïÒªÉ¾³ıVAOºÍVBO£¬ÊÍ·ÅÏÔ´æ
+		//è¿™é‡Œè¦åˆ é™¤VAOå’ŒVBOï¼Œé‡Šæ”¾æ˜¾å­˜
 		glDeleteVertexArrays(1, &VAO);
 		glDeleteBuffers(1, &VBO);
 	}

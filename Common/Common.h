@@ -6,5 +6,6 @@
 #include "Matrix.h"
 #include "Time.h"
 #include "Camera.h"
-#include "CameraController.h"
+#include "FPSCameraController.h"
 #include "RenderTarget.h"
+#include "Input.h"

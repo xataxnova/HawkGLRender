@@ -79,6 +79,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/source-charset:utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>glfw3.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -127,10 +128,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Camera.h" />
-    <ClInclude Include="Common\CameraController.h" />
+    <ClInclude Include="Common\FPSCameraController.h" />
     <ClInclude Include="Common\Common.h" />
     <ClInclude Include="Common\GameElement.h" />
     <ClInclude Include="Common\GLRenderElement.h" />
+    <ClInclude Include="Common\Input.h" />
     <ClInclude Include="Common\Matrix.h" />
     <ClInclude Include="Common\RenderTarget.h" />
     <ClInclude Include="Common\Shader.h" />

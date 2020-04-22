@@ -92,9 +92,6 @@
     <ClInclude Include="Topics\GLStupidCube.h">
       <Filter>头文件\Topics</Filter>
     </ClInclude>
-    <ClInclude Include="Common\CameraController.h">
-      <Filter>头文件\Common</Filter>
-    </ClInclude>
     <ClInclude Include="Common\GameElement.h">
       <Filter>头文件\Common</Filter>
     </ClInclude>
@@ -103,6 +100,12 @@
     </ClInclude>
     <ClInclude Include="Engine.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Input.h">
+      <Filter>头文件\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FPSCameraController.h">
+      <Filter>头文件\Common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

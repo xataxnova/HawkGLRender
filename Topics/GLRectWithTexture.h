@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <vector> 
@@ -12,16 +12,16 @@ public:
 public:
 	void prepare() {
 		float vertices[] = {
-			//     ---- Î»ÖÃ ----       ---- ÑÕÉ« ----     - ÎÆÀí×ø±ê -
-				 0.5f,  0.7f, 0.0f,   1.0f, 0.0f, 0.0f,   0.8f, 0.8f,   // ÓÒÉÏ
-				 0.5f, -0.7f, 0.0f,   0.0f, 1.0f, 0.0f,   0.8f, 0.2f,   // ÓÒÏÂ
-				-0.5f, -0.7f, 0.0f,   0.0f, 0.0f, 1.0f,   0.2f, 0.2f,   // ×óÏÂ
-				-0.5f,  0.7f, 0.0f,   1.0f, 1.0f, 0.0f,   0.2f, 0.8f    // ×óÉÏ
+			//     ---- ä½ç½® ----       ---- é¢œè‰² ----     - çº¹ç†åæ ‡ -
+				 0.5f,  0.7f, 0.0f,   1.0f, 0.0f, 0.0f,   0.8f, 0.8f,   // å³ä¸Š
+				 0.5f, -0.7f, 0.0f,   0.0f, 1.0f, 0.0f,   0.8f, 0.2f,   // å³ä¸‹
+				-0.5f, -0.7f, 0.0f,   0.0f, 0.0f, 1.0f,   0.2f, 0.2f,   // å·¦ä¸‹
+				-0.5f,  0.7f, 0.0f,   1.0f, 1.0f, 0.0f,   0.2f, 0.8f    // å·¦ä¸Š
 		};
 
-		unsigned int indices[] = { // ×¢ÒâË÷Òý´Ó0¿ªÊ¼! 
-			0, 1, 3, // µÚÒ»¸öÈý½ÇÐÎ
-			1, 2, 3  // µÚ¶þ¸öÈý½ÇÐÎ
+		unsigned int indices[] = { // æ³¨æ„ç´¢å¼•ä»Ž0å¼€å§‹! 
+			0, 1, 3, // ç¬¬ä¸€ä¸ªä¸‰è§’å½¢
+			1, 2, 3  // ç¬¬äºŒä¸ªä¸‰è§’å½¢
 		};
 
 		glGenVertexArrays(1, &VAO);
@@ -36,7 +36,7 @@ public:
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-		//×¢Òâ 8* sizeof(float)ÊÇstrideµÄ´óÐ¡£¬²»ÊÇÄãÕâ´ÎÊýÁË¶àÉÙ¸öfloat£¬·ñÔò¾ÍºÍ×îºóÒ»¸ö²ÎÊýÓÃÍ¾³åÍ»ÁË
+		//æ³¨æ„ 8* sizeof(float)æ˜¯strideçš„å¤§å°ï¼Œä¸æ˜¯ä½ è¿™æ¬¡æ•°äº†å¤šå°‘ä¸ªfloatï¼Œå¦åˆ™å°±å’Œæœ€åŽä¸€ä¸ªå‚æ•°ç”¨é€”å†²çªäº†
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);
 		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
@@ -58,10 +58,10 @@ public:
 	void render( Camera *currentCam ) {
 		shader->use();
 		shader->setInt("texture1", 0);
-		shader->setInt("texture2", 1);//¶àÕÅÌùÍ¼µÄÊ±ºò£¬ÕâÀï¾ÍÐèÒªÏÔÊ¾ÉèÖÃÒ»ÏÂÁË¡£
+		shader->setInt("texture2", 1);//å¤šå¼ è´´å›¾çš„æ—¶å€™ï¼Œè¿™é‡Œå°±éœ€è¦æ˜¾ç¤ºè®¾ç½®ä¸€ä¸‹äº†ã€‚
 		shader->setFloat("mixParam", mixParam);
 
-		//Ó¦ÓÃMVP¾ØÕó£¬µ½Shader
+		//åº”ç”¨MVPçŸ©é˜µï¼Œåˆ°Shader
 		currentCam->applyMVP(shader, transform );
 		
 		second_texture->use(0);

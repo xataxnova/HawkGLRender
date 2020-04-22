@@ -4,5 +4,5 @@
 
 class GameElement {
 public:
-	virtual void inputProcess( GLFWwindow *win ) {}
+	virtual void update(){}
 };

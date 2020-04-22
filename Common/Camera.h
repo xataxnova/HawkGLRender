@@ -18,8 +18,7 @@ private:
 	glm::mat4 view;
 	glm::mat4 projection;	
 public://components
-	Transform cameraTrans;
-	Transform *lookAtTarget;
+	Transform cameraTrans;	
 	RenderTarget *renderTarget;
 	static Camera * mainCam;
 public://veriables	
@@ -45,9 +44,6 @@ public://functions
 	void doModel( Transform& trans ) {
 		model = Transform::identity;
 		trans.doLocal(model);
-		//model = glm::rotate(model, glm::radians(cameraTrans.rotation.x), Transform::axis_x);
-		//model = glm::rotate(model, glm::radians(cameraTrans.rotation.y), Transform::axis_y);
-		//model = glm::rotate(model, glm::radians(cameraTrans.rotation.z), Transform::axis_z);
 	}
 
 	void doView() {
@@ -66,14 +62,6 @@ public://functions
 		shader->setMatrix4fv("model", model);
 		shader->setMatrix4fv("view", view);
 		shader->setMatrix4fv("projection", projection);
-	}
-
-	//这个做法不太好，这个不是Camera的功能，而是FirstPersonController的功能。等做完这个例子之后，把他抽出来。
-	//作为一个CameraController类来操作！
-	//Transfrom追加 getUp，getRight，getForward三个关联方法。
-	void processInput(GLFWwindow *window) 
-	{
-
 	}
 };
 

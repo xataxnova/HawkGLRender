@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <vector> 
@@ -46,22 +46,22 @@ private:
 
 	void fillBuffer() {
 		float vertices[] = {
-			// Î»ÖÃ              // ÑÕÉ«
-			 0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // ÓÒÏÂ
-			-0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // ×óÏÂ
-			 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // ¶¥²¿
+			// ä½ç½®              // é¢œè‰²
+			 0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // å³ä¸‹
+			-0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // å·¦ä¸‹
+			 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // é¡¶éƒ¨
 		};		
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 	}
 
 	void setupAttribute() {			
 		/*
-			Param 1: ±»¸Ä±äµÄÊôĞÔµÄË÷Òı,Ã»¶àÒ»¸öË÷Òı+1
+			Param 1: è¢«æ”¹å˜çš„å±æ€§çš„ç´¢å¼•,æ²¡å¤šä¸€ä¸ªç´¢å¼•+1
 			Param 2: size
-			Param 3: Êı¾İÀàĞÍ
-			Param 4: ÊÇ·ñ±ê×¼»¯
-			Param 5£ºStride²½½ø³¤¶È
-			Param 6: Ã»Ì«¶®£¬offset£¬Æ«ÒÆÁ¿£¬ÉÏÒ»¸öÊôĞÔ½áÊøÊ±ºòµÄÏÂÒ»¸öÎ»ÖÃ
+			Param 3: æ•°æ®ç±»å‹
+			Param 4: æ˜¯å¦æ ‡å‡†åŒ–
+			Param 5ï¼šStrideæ­¥è¿›é•¿åº¦
+			Param 6: æ²¡å¤ªæ‡‚ï¼Œoffsetï¼Œåç§»é‡ï¼Œä¸Šä¸€ä¸ªå±æ€§ç»“æŸæ—¶å€™çš„ä¸‹ä¸€ä¸ªä½ç½®
 		*/
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);

@@ -1,41 +1,67 @@
-#pragma once
+ï»¿#pragma once
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 #include "Common/Common.h"
 #include "Managers/Managers.h"
 
 class Engine {
 public:
 	ElementManager* elementManager;
+	GLFWwindow *window = NULL;
 public:
 	Engine() {}
 	~Engine() {}
 public:
-	void warmUp() {
-		//´´½¨µÄµÚÒ»¸öRenderTarget¾ÍÊÇ
+	void warmUp() {		
+		//åˆ›å»ºçš„ç¬¬ä¸€ä¸ªRenderTargetå°±æ˜¯ä¸»æ¸²æŸ“åŒºåŸŸ
 		RenderTarget::mainRenderTarget = new RenderTarget(0, 0, 1200, 720);
 	}
 
 	void startUp( GLFWwindow *win ) {
+
+		this->window = win;
+
+		Input::window = win;
+
+		//è®¾ç½®ä¸ºé¼ æ ‡ä¸å¯æŽ§æ¨¡å¼ï¼Œä¹Ÿå°±æ˜¯æ¸¸æˆæ¨¡å¼ã€‚å¦‚æžœæ˜¯ç¼–è¾‘å™¨æ¨¡å¼ï¼Œé¼ æ ‡è¿˜æ˜¯éœ€è¦å¯æŽ§çš„ï¼Œè¿™ä¸ªä»¥åŽå†è¯´ã€‚
+		//è¿™å—è€ƒè™‘æ˜¯ä¸æ˜¯å’ŒCameraç»“åˆåˆ°ä¸€èµ·ã€‚
+		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+		//ç»‘å®šé¼ æ ‡äº‹ä»¶åˆ°Inputå¯¹è±¡ä¸­ã€‚
+		glfwSetCursorPosCallback(window, Input::mouseCallback);
+	
+		//è¿™é‡Œæš‚æ—¶è¿˜æ²¡åšåˆ°åƒUnityçš„Inputä¸€æ ·ï¼Œå°†æ‰€æœ‰äº‹ä»¶å°è£…ä¸‹åŽ»ã€‚
 		elementManager = new ElementManager(win);	
 
 		createDefaultMainCamera();
 		createDefaultMainCameraController();
 	}
 
+	void tick() {
+		Time::tick();
+		elementManager->renderToCamera(Camera::mainCam);
+
+		//äº¤æ¢Bufferï¼Œæ‹‰å–äº‹ä»¶â€¦â€¦å¿˜è®°å¹²å˜›ç”¨çš„äº†
+		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
+		// -------------------------------------------------------------------------------
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+
+		//é‚£å…¶å®žç”¨çš„æ˜¯ä¸Šä¸€å¸§çš„æ•°æ®
+		elementManager->update();
+		Input::postUpdate();
+	}
+
 	void createDefaultMainCamera() {
 		Camera::mainCam = new Camera(RenderTarget::mainRenderTarget);
 		Camera::mainCam->fov = 45;
-		//µ±Ê¹ÓÃView¾ØÕóµÄÊ±ºò£¬²»ÔÙÐèÒª½«CameraÒÔÏà·´·½ÏòÔË¶¯ÁË£¡·ñÔòCameraµÄÎ»ÖÃÊÇ·´µÄ¡£
-		//¼ÙÉè±»¹Û²ìÎïÌå£¬ÔÚÔ­µã¡£
-		//UnityÊÇ×óÊÖ×ø±êÏµ£¬-Z³¯×ÅÆÁÄ»ÍâÃæ£¬ËùÒÔÉãÓ°»úÉèÖÃ³É-5Î»ÖÃ£¬Ïò×Å£¨0£¬0£¬1£©·½Ïò¿´¡£
-		//OpenGL£¬Z³¯×ÅÆÁÄ»ÍâÂô£¬ËùÒÔÉãÓ°»úÉèÖÃÎª5£¬³¯×Å£¨0£¬0£¬-1£©·½Ïò¿´¡£
-		Camera::mainCam->cameraTrans.position = glm::vec3(0, 0, 5.0f);
-
+		Camera::mainCam->cameraTrans.position = glm::vec3(0.0, 0, -5.0f);				
 		elementManager->addElement(Camera::mainCam);
 	}
 
 	void createDefaultMainCameraController() {
-		CameraController* camCtrl = new CameraController(Camera::mainCam);
-
+		FPSCameraController* camCtrl = new FPSCameraController(Camera::mainCam);		
+		camCtrl->yaw = 90;
 		elementManager->addElement(camCtrl);
 	}
 };

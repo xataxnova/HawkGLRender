@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #include <vector>
 #include "../Common/Common.h"
 
 using namespace std;
 
-//ÏÈÕâÃ´Ğ´°Ñ£¬³¡¾°¹ÜÀíÆ÷»¹Ã»×ö£¬Object³éÏóÒ²Ã»×ö£¬µÈÒÔºóÔÙËµ£¬ÏÖÔÚÏÈ°ÑOpenGL¹¾ààÃ÷°×
+//å…ˆè¿™ä¹ˆå†™æŠŠï¼Œåœºæ™¯ç®¡ç†å™¨è¿˜æ²¡åšï¼ŒObjectæŠ½è±¡ä¹Ÿæ²¡åšï¼Œç­‰ä»¥åå†è¯´ï¼Œç°åœ¨å…ˆæŠŠOpenGLå’•å™œæ˜ç™½
 class RenderManager {
 private:
 	vector<GLRenderElement*> renderQueue;
@@ -15,7 +15,7 @@ public:
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
 
-	//¼ÓÈë¶ÓÁĞµÄÊ±ºò£¬×Ô¶¯PrapareÒ»´Î¡£
+	//åŠ å…¥é˜Ÿåˆ—çš„æ—¶å€™ï¼Œè‡ªåŠ¨Prapareä¸€æ¬¡ã€‚
 	void addRenderElement(GLRenderElement * newElement) {
 		renderQueue.push_back(newElement);
 		newElement->prepare();

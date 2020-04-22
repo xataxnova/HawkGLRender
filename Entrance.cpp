@@ -61,9 +61,10 @@ int main()
 	}
 
 	engine.startUp(window);
+
 	ElementManager *elementMgr = engine.elementManager;
-	
-	
+
+	//Demo Code
 	auto newElement = new GLStupidCube();	
 	newElement->transform.rotation = glm::vec3(15,20,30);	
 	elementMgr->addElement(newElement);
@@ -72,16 +73,7 @@ int main()
 	// -----------
 	while (!glfwWindowShouldClose(window))
 	{	
-		Time::tick();
-		cout << "Delta time " << Time::deltaTime << endl;
-						
-		elementMgr->processInput();
-		elementMgr->renderToCamera( Camera::mainCam );
-
-		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
-		// -------------------------------------------------------------------------------
-		glfwSwapBuffers(window);
-		glfwPollEvents();
+		engine.tick();
 	}
 
 	// glfw: terminate, clearing all previously allocated GLFW resources.
